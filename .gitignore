@@ -57,3 +57,5 @@ gradlew.bat
 .project
 .classpath
 .settings
+
+generated_plugins.cmake
