@@ -170,7 +170,9 @@ class GoogleSignInPlugin extends GoogleSignInPlatform {
       loggingEnabled: kDebugMode,
     );
 
-    _initCalled!.complete(); // Signal that `init` is fully done.
+    if (!_initCalled!.isCompleted) {
+      _initCalled!.complete(); // Signal that `init` is fully done.
+    }
   }
 
   // Register a factory for the Button HtmlElementView.
